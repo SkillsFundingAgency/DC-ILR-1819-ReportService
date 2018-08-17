@@ -1,6 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application Name="fabric:/ESFA.DC.ILR1819.ReportService" xmlns="http://schemas.microsoft.com/2011/01/fabric" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Application xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="fabric:/ESFA.DC.ILR1819.ReportService" xmlns="http://schemas.microsoft.com/2011/01/fabric">
   <Parameters>
     <Parameter Name="ESFA.DC.ILR1819.ReportService.Stateless_InstanceCount" Value="-1" />
+    <Parameter Name="ILRDataStoreConnectionString" Value="__ILR1819DataStoreConnectionString__" />
+    <Parameter Name="AuditQueueName" Value="__AuditQueueName__" />
+    <Parameter Name="TopicName" Value="__TopicName__" />
+    <Parameter Name="ServiceBusConnectionString" Value="__ServiceBusConnectionStringServiceFabric__" />
+    <Parameter Name="LoggerConnectionstring" Value="__LoggerConnectionstring__" />
+    <Parameter Name="AzureBlobConnectionString" Value="__AzureBlobConnectionString__" />
+    <Parameter Name="AzureBlobContainerName" Value="__AzureBlobContainerName__" />
+    <Parameter Name="RedisConnectionString" Value="__RedisCacheConnectionString__" />
+    <Parameter Name="DataServicePlacementConstraints" Value="__DataServicePlacementConstraints__" />
+    <Parameter Name="JobStatusQueueName" Value="__JobStatusQueueName__" />
+    <Parameter Name="JobStatusConnectionString" Value="__JobStatusConnectionString__" />
+    <Parameter Name="ServiceReleaseVersion" Value="__ServiceReleaseVersion__" />
+    <Parameter Name="ReportingSubscriptionName" Value="__ReportingSubscriptionName__" />
+    <!-- Topic Names -->
+    <Parameter Name="TopicValidation" Value="__TopicValidation__" />
+    <Parameter Name="TopicFunding" Value="__TopicFunding__" />
+    <Parameter Name="TopicDeds" Value="__TopicDeds__" />
+    <Parameter Name="TopicDeds_TaskPersistDataToDeds" Value="__TopicDeds_TaskPersistDataToDeds__" />
+    <Parameter Name="TopicReports" Value="__TopicReports__" />
+    <Parameter Name="TopicReports_TaskGenerateValidationReport" Value="__TopicReports_TaskGenerateValidationReport__" />
+    <Parameter Name="TopicReports_TaskGenerateAllbOccupancyReport" Value="__TopicReports_TaskGenerateAllbOccupancyReport__" />
+    <Parameter Name="TopicReports_TaskGenerateFundingSummaryReport" Value="__TopicReports_TaskGenerateFundingSummaryReport__" />
+    <Parameter Name="TopicReports_TaskGenerateSummaryOfFunding1619Report" Value="__TopicReports_TaskGenerateSummaryOfFunding1619Report__" />
+    <Parameter Name="TopicReports_TaskGenerateMathsAndEnglishReport" Value="__TopicReports_TaskGenerateMathsAndEnglishReport__" />
+    <Parameter Name="TopicReports_TaskGenerateMainOccupancyReport" Value="__TopicReports_TaskGenerateMainOccupancyReport__" />
+    <!-- LARS -->
+    <Parameter Name="LarsConnectionString" Value="__LARSConnectionString__" />
+    <!-- Org -->
+    <Parameter Name="OrgConnectionString" Value="__OrganisationConnectionString__" />
+    <!-- Collections Management -->
+    <Parameter Name="CollectionsManagementConnectionString" Value="__CollectionsManagementDbConnectionString__" />
+    <Parameter Name="ProcessingServicePlacementConstraints" Value="__ProcessingServicePlacementConstraints__" />
   </Parameters>
 </Application>
