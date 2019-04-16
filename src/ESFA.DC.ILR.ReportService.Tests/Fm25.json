@@ -1,0 +1,559 @@
+{
+  "UKPRN": 10033670,
+  "LARSVersion": "Version_006",
+  "OrgVersion": "Version_003",
+  "PostcodeDisadvantageVersion": null,
+  "RulebaseVersion": "1819.01.03",
+  "Learners": [
+    {
+      "UKPRN": 0,
+      "LearnRefNumber": "0fm2501",
+      "AcadMonthPayment": 1,
+      "AcadProg": false,
+      "ActualDaysILCurrYear": 365,
+      "AreaCostFact1618Hist": 0.0,
+      "Block1DisadvUpliftNew": 1.0,
+      "Block2DisadvElementsNew": 0.0,
+      "ConditionOfFundingEnglish": "Condition of Funding Does Not Apply",
+      "ConditionOfFundingMaths": "Condition of Funding Does Not Apply",
+      "CoreAimSeqNumber": 1,
+      "FullTimeEquiv": 0.151666666666667,
+      "FundLine": "16-19 Students (excluding High Needs Students)",
+      "LearnerActEndDate": "2019-07-31T00:00:00+00:00",
+      "LearnerPlanEndDate": "2019-07-31T00:00:00+00:00",
+      "LearnerStartDate": "2017-10-14T00:00:00+00:00",
+      "NatRate": 606.666666666668,
+      "OnProgPayment": 0.0,
+      "PlannedDaysILCurrYear": 365,
+      "ProgWeightHist": 0.0,
+      "ProgWeightNew": 1.0,
+      "PrvDisadvPropnHist": 0.0,
+      "PrvHistLrgProgPropn": 0.0,
+      "PrvRetentFactHist": 0.0,
+      "RateBand": "Up to 279 hours (Band 1)",
+      "RetentNew": 1.0,
+      "StartFund": true,
+      "ThresholdDays": 42,
+      "LearnerPeriods": [
+        {
+          "LearnRefNumber": "0fm2501",
+          "Period": 1,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2501",
+          "Period": 2,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2501",
+          "Period": 3,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2501",
+          "Period": 4,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2501",
+          "Period": 5,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2501",
+          "Period": 6,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2501",
+          "Period": 7,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2501",
+          "Period": 8,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2501",
+          "Period": 9,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2501",
+          "Period": 10,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2501",
+          "Period": 11,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2501",
+          "Period": 12,
+          "LnrOnProgPay": 0.0
+        }
+      ],
+      "LearnerPeriodisedValues": [
+        {
+          "LearnRefNumber": "0fm2501",
+          "AttributeName": "0.0",
+          "Period1": 0.0,
+          "Period2": 0.0,
+          "Period3": 0.0,
+          "Period4": 0.0,
+          "Period5": 0.0,
+          "Period6": 0.0,
+          "Period7": 0.0,
+          "Period8": 0.0,
+          "Period9": 0.0,
+          "Period10": 0.0,
+          "Period11": 0.0,
+          "Period12": 0.0
+        }
+      ]
+    },
+    {
+      "UKPRN": 0,
+      "LearnRefNumber": "0fm2502",
+      "AcadMonthPayment": 1,
+      "AcadProg": false,
+      "ActualDaysILCurrYear": 365,
+      "AreaCostFact1618Hist": 0.0,
+      "Block1DisadvUpliftNew": 1.0,
+      "Block2DisadvElementsNew": 0.0,
+      "ConditionOfFundingEnglish": "Condition of Funding Does Not Apply",
+      "ConditionOfFundingMaths": "Condition of Funding Does Not Apply",
+      "CoreAimSeqNumber": 1,
+      "FullTimeEquiv": 0.151666666666667,
+      "FundLine": "19+ Continuing Students (excluding EHCP)",
+      "LearnerActEndDate": "2019-07-31T00:00:00+00:00",
+      "LearnerPlanEndDate": "2019-07-31T00:00:00+00:00",
+      "LearnerStartDate": "2017-10-14T00:00:00+00:00",
+      "NatRate": 606.666666666668,
+      "OnProgPayment": 0.0,
+      "PlannedDaysILCurrYear": 365,
+      "ProgWeightHist": 0.0,
+      "ProgWeightNew": 1.0,
+      "PrvDisadvPropnHist": 0.0,
+      "PrvHistLrgProgPropn": 0.0,
+      "PrvRetentFactHist": 0.0,
+      "RateBand": "360 to 449 hours (Band 3)",
+      "RetentNew": 1.0,
+      "StartFund": true,
+      "ThresholdDays": 42,
+      "LearnerPeriods": [
+        {
+          "LearnRefNumber": "0fm2502",
+          "Period": 1,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2502",
+          "Period": 2,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2502",
+          "Period": 3,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2502",
+          "Period": 4,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2502",
+          "Period": 5,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2502",
+          "Period": 6,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2502",
+          "Period": 7,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2502",
+          "Period": 8,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2502",
+          "Period": 9,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2502",
+          "Period": 10,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2502",
+          "Period": 11,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2502",
+          "Period": 12,
+          "LnrOnProgPay": 0.0
+        }
+      ],
+      "LearnerPeriodisedValues": [
+        {
+          "LearnRefNumber": "0fm2502",
+          "AttributeName": "0.0",
+          "Period1": 0.0,
+          "Period2": 0.0,
+          "Period3": 0.0,
+          "Period4": 0.0,
+          "Period5": 0.0,
+          "Period6": 0.0,
+          "Period7": 0.0,
+          "Period8": 0.0,
+          "Period9": 0.0,
+          "Period10": 0.0,
+          "Period11": 0.0,
+          "Period12": 0.0
+        }
+      ]
+    },
+    {
+      "UKPRN": 0,
+      "LearnRefNumber": "0fm2503",
+      "AcadMonthPayment": 1,
+      "AcadProg": false,
+      "ActualDaysILCurrYear": 365,
+      "AreaCostFact1618Hist": 0.0,
+      "Block1DisadvUpliftNew": 1.0,
+      "Block2DisadvElementsNew": 0.0,
+      "ConditionOfFundingEnglish": "Condition of Funding Does Not Apply",
+      "ConditionOfFundingMaths": "Condition of Funding Does Not Apply",
+      "CoreAimSeqNumber": 1,
+      "FullTimeEquiv": 0.151666666666667,
+      "FundLine": "19-24 Students with an EHCP",
+      "LearnerActEndDate": "2019-07-31T00:00:00+00:00",
+      "LearnerPlanEndDate": "2019-07-31T00:00:00+00:00",
+      "LearnerStartDate": "2017-10-14T00:00:00+00:00",
+      "NatRate": 606.666666666668,
+      "OnProgPayment": 0.0,
+      "PlannedDaysILCurrYear": 365,
+      "ProgWeightHist": 0.0,
+      "ProgWeightNew": 1.0,
+      "PrvDisadvPropnHist": 0.0,
+      "PrvHistLrgProgPropn": 0.0,
+      "PrvRetentFactHist": 0.0,
+      "RateBand": "280 to 359 hours (Band 2)",
+      "RetentNew": 1.0,
+      "StartFund": true,
+      "ThresholdDays": 42,
+      "LearnerPeriods": [
+        {
+          "LearnRefNumber": "0fm2503",
+          "Period": 1,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2503",
+          "Period": 2,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2503",
+          "Period": 3,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2503",
+          "Period": 4,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2503",
+          "Period": 5,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2503",
+          "Period": 6,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2503",
+          "Period": 7,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2503",
+          "Period": 8,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2503",
+          "Period": 9,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2503",
+          "Period": 10,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2503",
+          "Period": 11,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2503",
+          "Period": 12,
+          "LnrOnProgPay": 0.0
+        }
+      ],
+      "LearnerPeriodisedValues": [
+        {
+          "LearnRefNumber": "0fm2503",
+          "AttributeName": "0.0",
+          "Period1": 0.0,
+          "Period2": 0.0,
+          "Period3": 0.0,
+          "Period4": 0.0,
+          "Period5": 0.0,
+          "Period6": 0.0,
+          "Period7": 0.0,
+          "Period8": 0.0,
+          "Period9": 0.0,
+          "Period10": 0.0,
+          "Period11": 0.0,
+          "Period12": 0.0
+        }
+      ]
+    },
+    {
+      "UKPRN": 0,
+      "LearnRefNumber": "0fm2504",
+      "AcadMonthPayment": 1,
+      "AcadProg": false,
+      "ActualDaysILCurrYear": 365,
+      "AreaCostFact1618Hist": 0.0,
+      "Block1DisadvUpliftNew": 1.0,
+      "Block2DisadvElementsNew": 0.0,
+      "ConditionOfFundingEnglish": "Condition of Funding Does Not Apply",
+      "ConditionOfFundingMaths": "Condition of Funding Does Not Apply",
+      "CoreAimSeqNumber": 1,
+      "FullTimeEquiv": 0.151666666666667,
+      "FundLine": "19-24 Students with an EHCP",
+      "LearnerActEndDate": "2019-07-31T00:00:00+00:00",
+      "LearnerPlanEndDate": "2019-07-31T00:00:00+00:00",
+      "LearnerStartDate": "2017-10-14T00:00:00+00:00",
+      "NatRate": 606.666666666668,
+      "OnProgPayment": 0.0,
+      "PlannedDaysILCurrYear": 365,
+      "ProgWeightHist": 0.0,
+      "ProgWeightNew": 1.0,
+      "PrvDisadvPropnHist": 0.0,
+      "PrvHistLrgProgPropn": 0.0,
+      "PrvRetentFactHist": 0.0,
+      "RateBand": "280 to 359 hours (Band 2)",
+      "RetentNew": 1.0,
+      "StartFund": true,
+      "ThresholdDays": 42,
+      "LearnerPeriods": [
+        {
+          "LearnRefNumber": "0fm2504",
+          "Period": 1,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2504",
+          "Period": 2,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2504",
+          "Period": 3,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2504",
+          "Period": 4,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2504",
+          "Period": 5,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2504",
+          "Period": 6,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2504",
+          "Period": 7,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2504",
+          "Period": 8,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2504",
+          "Period": 9,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2504",
+          "Period": 10,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2504",
+          "Period": 11,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0fm2504",
+          "Period": 12,
+          "LnrOnProgPay": 0.0
+        }
+      ],
+      "LearnerPeriodisedValues": [
+        {
+          "LearnRefNumber": "0fm2504",
+          "AttributeName": "0.0",
+          "Period1": 0.0,
+          "Period2": 0.0,
+          "Period3": 0.0,
+          "Period4": 0.0,
+          "Period5": 0.0,
+          "Period6": 0.0,
+          "Period7": 0.0,
+          "Period8": 0.0,
+          "Period9": 0.0,
+          "Period10": 0.0,
+          "Period11": 0.0,
+          "Period12": 0.0
+        }
+      ]
+    },
+    {
+      "UKPRN": 0,
+      "LearnRefNumber": "0Addl103",
+      "AcadMonthPayment": 1,
+      "AcadProg": false,
+      "ActualDaysILCurrYear": 365,
+      "AreaCostFact1618Hist": 0.0,
+      "Block1DisadvUpliftNew": 1.0,
+      "Block2DisadvElementsNew": 0.0,
+      "ConditionOfFundingEnglish": "Condition of Funding Does Not Apply",
+      "ConditionOfFundingMaths": "Condition of Funding Does Not Apply",
+      "CoreAimSeqNumber": 1,
+      "FullTimeEquiv": 0.151666666666667,
+      "FundLine": "19-24 Students with an EHCP",
+      "LearnerActEndDate": "2019-07-31T00:00:00+00:00",
+      "LearnerPlanEndDate": "2019-07-31T00:00:00+00:00",
+      "LearnerStartDate": "2017-10-14T00:00:00+00:00",
+      "NatRate": 606.666666666668,
+      "OnProgPayment": 0.0,
+      "PlannedDaysILCurrYear": 365,
+      "ProgWeightHist": 0.0,
+      "ProgWeightNew": 1.0,
+      "PrvDisadvPropnHist": 0.0,
+      "PrvHistLrgProgPropn": 0.0,
+      "PrvRetentFactHist": 0.0,
+      "RateBand": "280 to 359 hours (Band 2)",
+      "RetentNew": 1.0,
+      "StartFund": true,
+      "ThresholdDays": 42,
+      "LearnerPeriods": [
+        {
+          "LearnRefNumber": "0Addl103",
+          "Period": 1,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0Addl103",
+          "Period": 2,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0Addl103",
+          "Period": 3,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0Addl103",
+          "Period": 4,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0Addl103",
+          "Period": 5,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0Addl103",
+          "Period": 6,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0Addl103",
+          "Period": 7,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0Addl103",
+          "Period": 8,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0Addl103",
+          "Period": 9,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0Addl103",
+          "Period": 10,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0Addl103",
+          "Period": 11,
+          "LnrOnProgPay": 0.0
+        },
+        {
+          "LearnRefNumber": "0Addl103",
+          "Period": 12,
+          "LnrOnProgPay": 0.0
+        }
+      ],
+      "LearnerPeriodisedValues": [
+        {
+          "LearnRefNumber": "0Addl103",
+          "AttributeName": "0.0",
+          "Period1": 0.0,
+          "Period2": 0.0,
+          "Period3": 0.0,
+          "Period4": 0.0,
+          "Period5": 0.0,
+          "Period6": 0.0,
+          "Period7": 0.0,
+          "Period8": 0.0,
+          "Period9": 0.0,
+          "Period10": 0.0,
+          "Period11": 0.0,
+          "Period12": 0.0
+        }
+      ]
+    }
+  ]
+}

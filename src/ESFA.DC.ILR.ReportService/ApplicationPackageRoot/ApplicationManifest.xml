@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ApplicationTypeName="ESFA.DC.ILR1819.ReportServiceType" ApplicationTypeVersion="1.0.0" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Parameters>
+    <Parameter Name="ESFA.DC.ILR1819.ReportService.Stateless_InstanceCount" DefaultValue="1" />
+    <Parameter Name="ProcessingServicePlacementConstraints" DefaultValue="" />
+    <Parameter Name="AuditQueueName" DefaultValue="audit-queue" />
+    <Parameter Name="TopicName" DefaultValue="TopicName" />
+    <Parameter Name="ServiceBusConnectionString" DefaultValue="" />
+    <Parameter Name="ILRDataStoreConnectionString" DefaultValue="data source=(local);initial catalog=ILR1819_DataStore;integrated security=True;multipleactiveresultsets=True;Connect Timeout=90" />
+    <Parameter Name="ILRDataStoreValidConnectionString" DefaultValue="data source=(local);initial catalog=ILR1819_DataStore;integrated security=True;multipleactiveresultsets=True;Connect Timeout=90" />
+    <Parameter Name="LoggerConnectionstring" DefaultValue="data source=(local);initial catalog=logs;integrated security=True;multipleactiveresultsets=True;Connect Timeout=90;" />
+    <Parameter Name="MaxMessageSize" DefaultValue="1073741824" />
+    <Parameter Name="AzureBlobConnectionString" DefaultValue="UseDevelopmentStorage=true" />
+    <Parameter Name="AzureBlobContainerName" DefaultValue="ilr-files" />
+    <Parameter Name="AsposeLicence" DefaultValue="" />
+    <Parameter Name="RedisConnectionString" DefaultValue="" />
+    <Parameter Name="DataServicePlacementConstraints" DefaultValue="" />
+    <Parameter Name="ServiceReleaseVersion" DefaultValue="" />
+    <Parameter Name="JobStatusQueueName" DefaultValue="" />
+    <Parameter Name="JobStatusConnectionString" DefaultValue="" />
+    <Parameter Name="ReportingSubscriptionName" DefaultValue="GenerateValidationReport" />
+    <!-- Topic Names -->
+    <Parameter Name="TopicValidation" DefaultValue="Validation" />
+    <Parameter Name="TopicFunding" DefaultValue="Funding" />
+    <Parameter Name="TopicDeds" DefaultValue="Deds" />
+    <Parameter Name="TopicReports" DefaultValue="Reports" />
+    <Parameter Name="TopicReports_TaskGenerateValidationReport" DefaultValue="GenerateValidationReport" />
+    <Parameter Name="TopicReports_TaskGenerateAllbOccupancyReport" DefaultValue="GenerateAlbOccupancyReport" />
+    <Parameter Name="TopicReports_TaskGenerateFundingSummaryReport" DefaultValue="GenerateFundingSummaryReport" />
+    <Parameter Name="TopicReports_TaskGenerateAdultFundingClaimReport" DefaultValue="GenerateAdultFundingClaimReport" />
+    <Parameter Name="TopicReports_TaskGenerateSummaryOfFunding1619Report" DefaultValue="GenerateSummaryOfFunding1619Report" />
+    <Parameter Name="TopicReports_TaskGenerateMathsAndEnglishReport" DefaultValue="GenerateMathsAndEnglishReport" />
+    <Parameter Name="TopicReports_TaskGenerateMainOccupancyReport" DefaultValue="GenerateMainOccupancyReport" />
+    <Parameter Name="TopicReports_TaskGenerateAppsAdditionalPaymentsReport" DefaultValue="GenerateAppsAdditionalPaymentsReport" />
+    <Parameter Name="TopicReports_TaskGenerateAppsIndicativeEarningsReport" DefaultValue="GenerateAppsIndicativeEarningsReport" />
+    <Parameter Name="TopicReports_TaskGenerateAppsCoInvestmentContributionsReport" DefaultValue="GenerateAppsCoInvestmentContributionsReport" />
+    <Parameter Name="TopicReports_TaskGenerateAppsMonthlyPaymentReport" DefaultValue="GenerateAppsMonthlyPaymentReport" />
+    <Parameter Name="TopicReports_TaskGenerateAppsDataMatchMonthEndReport" DefaultValue="GenerateAppsDataMatchMonthEndReport" />
+    <Parameter Name="TopicReports_TaskGenerateFundingSummaryPeriodEndReport" DefaultValue="GenerateFundingSummaryPeriodEndReport" />
+    <Parameter Name="TopicReports_TaskGenerateDataMatchReport" DefaultValue="GenerateDataMatchReport" />
+    <Parameter Name="TopicDeds_TaskPersistDataToDeds" DefaultValue="PersistDataToDeds" />
+    <Parameter Name="TopicReports_TaskGenerateTrailblazerEmployerIncentivesReport" DefaultValue="GenerateTrailblazerEmployerIncentivesReport" />
+    <Parameter Name="TopicReports_TaskGenerateFundingClaim1619Report" DefaultValue="TopicReports_TaskGenerateFundingClaim1619Report" />
+    <Parameter Name="TopicReports_TaskGenerateTrailblazerAppsOccupancyReport" DefaultValue="GenerateTrailblazerAppsOccupancyReport" />
+    <Parameter Name="TopicReports_TaskGenerateHNSReport" DefaultValue="TopicReports_TaskGenerateHNSReport" />
+    <!-- LARS -->
+    <Parameter Name="LarsConnectionString" DefaultValue="" />
+    <!-- DASPayments -->
+    <Parameter Name="DASPaymentsConnectionString" DefaultValue="" />
+    <!-- DAS Commitments -->
+    <Parameter Name="DasCommitmentsConnectionString" DefaultValue="" />
+    <!-- EAS -->
+    <Parameter Name="EasConnectionString" DefaultValue="" />
+    <!-- Postcode -->
+    <Parameter Name="PostcodeConnectionString" DefaultValue="" />
+    <!-- Large Employer -->
+    <Parameter Name="LargeEmployerConnectionString" DefaultValue="" />
+    <!-- Org -->
+    <Parameter Name="OrgConnectionString" DefaultValue="" />
+    <!-- Collections Management -->
+    <Parameter Name="CollectionsManagementConnectionString" DefaultValue="" />
+    <!-- ILR Validation Errors -->
+    <Parameter Name="IlrValidationErrorsConnectionString" DefaultValue="" />
+  </Parameters>
+  <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
+       should match the Name and Version attributes of the ServiceManifest element defined in the 
+       ServiceManifest.xml file. -->
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="ESFA.DC.ILR1819.ReportService.StatelessPkg" ServiceManifestVersion="1.0.0" />
+    <ConfigOverrides>
+      <ConfigOverride Name="Config">
+        <Settings>
+          <Section Name="DataStoreSection">
+            <Parameter Name="ILRDataStoreConnectionString" Value="[ILRDataStoreConnectionString]" />
+            <Parameter Name="ILRDataStoreValidConnectionString" Value="[ILRDataStoreValidConnectionString]" />
+          </Section>
+          <Section Name="DASPaymentsSection">
+            <Parameter Name="DASPaymentsConnectionString" Value="[DASPaymentsConnectionString]" />
+          </Section>
+          <Section Name="ServiceBusSettings">
+            <Parameter Name="AuditQueueName" Value="[AuditQueueName]" />
+            <Parameter Name="ServiceBusConnectionString" Value="[ServiceBusConnectionString]" />
+            <Parameter Name="TopicName" Value="[TopicName]" />
+            <Parameter Name="ReportingSubscriptionName" Value="[ReportingSubscriptionName]" />
+          </Section>
+          <Section Name="DataTransportSettings">
+            <Parameter Name="MaxMessageSize" Value="[MaxMessageSize]" />
+          </Section>
+          <Section Name="LoggerSection">
+            <Parameter Name="LoggerConnectionstring" Value="[LoggerConnectionstring]" />
+          </Section>
+          <Section Name="AzureStorageSection">
+            <Parameter Name="AzureBlobConnectionString" Value="[AzureBlobConnectionString]" />
+            <Parameter Name="AzureBlobContainerName" Value="[AzureBlobContainerName]" />
+          </Section>
+          <Section Name="SoftwareLicenceSection">
+            <Parameter Name="AsposeLicence" Value="[AsposeLicence]" />
+          </Section>
+          <Section Name="RedisSection">
+            <Parameter Name="RedisConnectionString" Value="[RedisConnectionString]" />
+          </Section>
+          <Section Name="VersionSection">
+            <Parameter Name="ServiceReleaseVersion" Value="[ServiceReleaseVersion]" />
+          </Section>
+          <Section Name="JobStatusSection">
+            <Parameter Name="JobStatusQueueName" Value="[JobStatusQueueName]" />
+            <Parameter Name="JobStatusConnectionString" Value="[JobStatusConnectionString]" />
+          </Section>
+          <Section Name="TopicAndTaskSection">
+            <Parameter Name="TopicValidation" Value="[TopicValidation]" />
+            <Parameter Name="TopicFunding" Value="[TopicFunding]" />
+            <Parameter Name="TopicDeds" Value="[TopicDeds]" />
+            <Parameter Name="TopicReports" Value="[TopicReports]" />
+            <Parameter Name="TopicReports_TaskGenerateValidationReport" Value="[TopicReports_TaskGenerateValidationReport]" />
+            <Parameter Name="TopicReports_TaskGenerateAllbOccupancyReport" Value="[TopicReports_TaskGenerateAllbOccupancyReport]" />
+            <Parameter Name="TopicReports_TaskGenerateFundingSummaryReport" Value="[TopicReports_TaskGenerateFundingSummaryReport]" />
+            <Parameter Name="TopicReports_TaskGenerateAdultFundingClaimReport" Value="[TopicReports_TaskGenerateAdultFundingClaimReport]" />
+            <Parameter Name="TopicReports_TaskGenerateSummaryOfFunding1619Report" Value="[TopicReports_TaskGenerateSummaryOfFunding1619Report]" />
+            <Parameter Name="TopicReports_TaskGenerateMathsAndEnglishReport" Value="[TopicReports_TaskGenerateMathsAndEnglishReport]" />
+            <Parameter Name="TopicReports_TaskGenerateMainOccupancyReport" Value="[TopicReports_TaskGenerateMainOccupancyReport]" />
+            <Parameter Name="TopicReports_TaskGenerateDataMatchReport" Value="[TopicReports_TaskGenerateDataMatchReport]" />
+            <Parameter Name="TopicDeds_TaskPersistDataToDeds" Value="[TopicDeds_TaskPersistDataToDeds]" />
+            <Parameter Name="TopicReports_TaskGenerateAppsAdditionalPaymentsReport" Value="[TopicReports_TaskGenerateAppsAdditionalPaymentsReport]" />
+            <Parameter Name="TopicReports_TaskGenerateAppsIndicativeEarningsReport" Value="[TopicReports_TaskGenerateAppsIndicativeEarningsReport]" />
+            <Parameter Name="TopicReports_TaskGenerateAppsCoInvestmentContributionsReport" Value="[TopicReports_TaskGenerateAppsCoInvestmentContributionsReport]" />
+            <Parameter Name="TopicReports_TaskGenerateAppsMonthlyPaymentReport" Value="[TopicReports_TaskGenerateAppsMonthlyPaymentReport]" />
+            <Parameter Name="TopicReports_TaskGenerateAppsDataMatchMonthEndReport" Value="[TopicReports_TaskGenerateAppsDataMatchMonthEndReport]" />
+            <Parameter Name="TopicReports_TaskGenerateFundingSummaryPeriodEndReport" Value="[TopicReports_TaskGenerateFundingSummaryPeriodEndReport]" />
+            <Parameter Name="TopicReports_TaskGenerateTrailblazerEmployerIncentivesReport" Value="[TopicReports_TaskGenerateTrailblazerEmployerIncentivesReport]" />
+            <Parameter Name="TopicReports_TaskGenerateFundingClaim1619Report" Value="[TopicReports_TaskGenerateFundingClaim1619Report]" />
+            <Parameter Name="TopicReports_TaskGenerateHNSReport" Value="[TopicReports_TaskGenerateHNSReport]" />
+          </Section>
+          <Section Name="LarsSection">
+            <Parameter Name="LarsConnectionString" Value="[LarsConnectionString]" />
+          </Section>
+          <Section Name="OrgSection">
+            <Parameter Name="OrgConnectionString" Value="[OrgConnectionString]" />
+          </Section>
+          <Section Name="DasCommitmentsSection">
+            <Parameter Name="DasCommitmentsConnectionString" Value="[DasCommitmentsConnectionString]" />
+          </Section>
+          <Section Name="EasSection">
+            <Parameter Name="EasConnectionString" Value="[EasConnectionString]" />
+          </Section>
+          <Section Name="PostcodeSection">
+            <Parameter Name="PostcodeConnectionString" Value="[PostcodeConnectionString]" />
+          </Section>
+          <Section Name="LargeEmployerSection">
+            <Parameter Name="LargeEmployerConnectionString" Value="[LargeEmployerConnectionString]" />
+          </Section>
+          <Section Name="CollectionsManagementSection">
+            <Parameter Name="CollectionsManagementConnectionString" Value="[CollectionsManagementConnectionString]" />
+          </Section>
+          <Section Name="IlrValidationErrorsSection">
+            <Parameter Name="IlrValidationErrorsConnectionString" Value="[IlrValidationErrorsConnectionString]" />
+          </Section>
+        </Settings>
+      </ConfigOverride>
+    </ConfigOverrides>
+  </ServiceManifestImport>
+  <DefaultServices>
+    <!-- The section below creates instances of service types, when an instance of this 
+         application type is created. You can also create one or more instances of service type using the 
+         ServiceFabric PowerShell module.
+         
+         The attribute ServiceTypeName below must match the name defined in the imported ServiceManifest.xml file. -->
+    <Service Name="ESFA.DC.ILR1819.ReportService.Stateless" ServicePackageActivationMode="ExclusiveProcess">
+      <StatelessService ServiceTypeName="ESFA.DC.ILR1819.ReportService.StatelessType" InstanceCount="[ESFA.DC.ILR1819.ReportService.Stateless_InstanceCount]">
+        <SingletonPartition />
+        <PlacementConstraints>[ProcessingServicePlacementConstraints]</PlacementConstraints>
+      </StatelessService>
+    </Service>
+  </DefaultServices>
+</ApplicationManifest>

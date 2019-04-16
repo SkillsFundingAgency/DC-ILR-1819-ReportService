@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAE090BB-2C20-4449-B0A1-A412D6A382EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ESFA.DC.ILR.ReportService.Tests</RootNamespace>
+    <AssemblyName>ESFA.DC.ILR.ReportService.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>ESFA.DC.ILR.ReportService.Tests.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>ESFA.DC.ILR.ReportService.Tests.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ESFA.DC.ILR.ReportService.Tests.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ESFA.DC.ILR.ReportService.Tests.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESFA.DC.Data.Organisatons.Model, Version=0.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ESFA.DC.Data.Organisations.Model.0.1.5-beta0001\lib\net461\ESFA.DC.Data.Organisatons.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoFac\AutoFacTest.cs" />
+    <Compile Include="General\TestEntryPoint.cs" />
+    <Compile Include="Helpers\TestCsvHelper.cs" />
+    <Compile Include="Helpers\TestFM25Builder.cs" />
+    <Compile Include="Helpers\TestFM35Builder.cs" />
+    <Compile Include="Helpers\TestXlsxHelper.cs" />
+    <Compile Include="Models\CsvEntry.cs" />
+    <Compile Include="Models\XlsxEntry.cs" />
+    <Compile Include="Reports\ALB\TestAlbOccupancyReportWithTestData.cs" />
+    <Compile Include="Reports\Data Match\TestDasCommitmentBuilder.cs" />
+    <Compile Include="Reports\FundigClaim1619\TestFm25GlobalBuilder.cs" />
+    <Compile Include="Reports\Main Occupancy\TestMainOccupancyReportWithTestData.cs" />
+    <Compile Include="Reports\PeriodEnd\AppsAdditionalPayments\TestAppsAdditionalPaymentsReport.cs" />
+    <Compile Include="Reports\PeriodEnd\AppsCoInvestmentContributions\TestAppsCoInvestmentContributionsReport.cs" />
+    <Compile Include="Reports\PeriodEnd\AppsDataMatchMonthEnd\TestAppsDataMatchMonthEndReport.cs" />
+    <Compile Include="Reports\PeriodEnd\AppsMonthlyPayment\TestAppsMonthlyPaymentReport.cs" />
+    <Compile Include="Reports\PeriodEnd\FundingSummaryPeriodEnd\TestFundingSummaryPeriodEndReport.cs" />
+    <Compile Include="Reports\TestTrailblazerAppsOccupancyReport.cs" />
+    <Compile Include="Reports\TestDataMatchReport.cs" />
+    <Compile Include="Reports\TestAdultFundingClaimReport.cs" />
+    <Compile Include="Reports\TestHNSReport.cs" />
+    <Compile Include="Reports\TestMainOccupancyReport.cs" />
+    <Compile Include="Reports\TestAppsIndicativeEarningsReport.cs" />
+    <Compile Include="Reports\TestMathsAndEnglishReport.cs" />
+    <Compile Include="Reports\TestSummaryOfFM35FundingReport.cs" />
+    <Compile Include="Reports\TestSummaryOfFunding1619Report.cs" />
+    <Compile Include="Reports\TestTrailblazerEmployerIncentiveReport.cs" />
+    <Compile Include="Reports\Validation\TestValidationReportLotsOfErrors.cs" />
+    <Compile Include="Service\DasCommitmentsServiceTest.cs" />
+    <Compile Include="Service\FM35ProviderServiceTest.cs" />
+    <Compile Include="Reports\TestAllbOccupancyReport.cs" />
+    <Compile Include="AutoFac\TestConfigurationHelper.cs" />
+    <Compile Include="Reports\TestFundingSummaryReport.cs" />
+    <Compile Include="Reports\TestValidationReport.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ValueProviderServiceTest.cs" />
+    <Compile Include="Reports\FundigClaim1619\TestFundingClaim1619Report.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ILR-10033670-1819-20181212-103550-36.XML">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ILR-10033670-1819-20181213-230923-03.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ILR-10033670-1819-20181206-093952-03.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\ALB\ILR-10033670-1819-20180909-090909-99.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Main Occupancy\ILR-10033670-1819-20181030-101919-07.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Main Occupancy\ILR-10033670-1819-20181203-143338-25.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Main Occupancy\ILR-10033670-1819-20181205-135040-25.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Validation\ILR-10000020-1819-20181005-120953-03.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="66230-FundingFm36Output.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ALBOutput1000.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="app.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ESFA.DC.ILR.ReportService.Tests.ruleset">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Fm25.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fm35.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fm36.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fm81.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Reports\ALB\Alb1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\Main Occupancy\FundingFm35Output_FM35TNP13.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\ALB\Alb2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\ALB\ValidationValidLearners1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\ALB\ValidationValidLearners2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Reports\Main Occupancy\FundingFm35Output_fm25 19C 1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Main Occupancy\FundingFm35Output_fm25 19T 1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Validation\ValidationErrors.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Reports\Validation\ValidationErrorsLookup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Service\FundingFm35OutputEmpty.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ValidationErrors.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ValidationErrorsLookup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ValidLearnRefNumbers.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ESFA.DC.ILR.ReportService.Interface\ESFA.DC.ILR.ReportService.Interface.csproj">
+      <Project>{4D408F22-661B-44B3-B6CA-3C6CEE60AC87}</Project>
+      <Name>ESFA.DC.ILR.ReportService.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ESFA.DC.ILR.ReportService.Model\ESFA.DC.ILR.ReportService.Model.csproj">
+      <Project>{39DB428D-1380-40F2-9361-18ED31CF95FC}</Project>
+      <Name>ESFA.DC.ILR.ReportService.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ESFA.DC.ILR.ReportService.Service\ESFA.DC.ILR.ReportService.Service.csproj">
+      <Project>{7E327D70-D514-40A0-AC07-35176660149C}</Project>
+      <Name>ESFA.DC.ILR.ReportService.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ESFA.DC.ILR.ReportService.Stateless\ESFA.DC.ILR1819.ReportService.Stateless.csproj">
+      <Project>{125B4643-12BE-4626-9B68-DD1EC6EA9F9C}</Project>
+      <Name>ESFA.DC.ILR1819.ReportService.Stateless</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ILR-10033670-1819-20180704-120055-03.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ILR-10033670-1819-20180712-144437-03.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ILR-10033670-1819-20180831-094549-03.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Reports\ALB\ILR-10033670-1819-20181018-093353-03.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspose.Cells">
+      <Version>19.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Autofac">
+      <Version>4.8.1</Version>
+    </PackageReference>
+    <PackageReference Include="CsvHelper">
+      <Version>7.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.DASPayments.EF">
+      <Version>0.1.67</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.Data.DAS.Model">
+      <Version>0.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.Data.LARS.Model">
+      <Version>0.1.4-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.DateTimeProvider">
+      <Version>0.1.6-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.EAS1819.EF">
+      <Version>0.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.1819.Model.Interface">
+      <Version>0.1.4-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.FundingService.FM25.FundingOutput.Model">
+      <Version>0.1.320</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.FundingService.FM35.FundingOutput.Model">
+      <Version>0.1.320</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.FundingService.FM36.FundingOutput.Model">
+      <Version>0.1.320</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.FundingService.FM81.FundingOutput.Model">
+      <Version>0.1.320</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.ValidationErrors.Interface">
+      <Version>0.1.6-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR1819.Database.EF">
+      <Version>0.1.373</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.IO.Interfaces">
+      <Version>0.1.12-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.JobContextManager">
+      <Version>0.2.4-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.Serialization.Json">
+      <Version>0.1.5-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.Serialization.Xml">
+      <Version>0.1.5-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ServiceFabric.Helpers">
+      <Version>0.1.3-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="FluentAssertions">
+      <Version>5.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers">
+      <Version>2.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <Version>2.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer">
+      <Version>2.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="Moq">
+      <Version>4.8.3</Version>
+    </PackageReference>
+    <PackageReference Include="StyleCop.Analyzers">
+      <Version>1.0.2</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.DiagnosticSource">
+      <Version>4.5.1</Version>
+    </PackageReference>
+    <PackageReference Include="xunit">
+      <Version>2.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="xunit.analyzers">
+      <Version>0.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="xunit.core">
+      <Version>2.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="xunit.runner.visualstudio">
+      <Version>2.4.1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

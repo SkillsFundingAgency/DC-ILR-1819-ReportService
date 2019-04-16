@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>..\ESFA.DC.ILR.ReportService.Tests\ESFA.DC.ILR.ReportService.Tests.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>..\ESFA.DC.ILR.ReportService.Tests\ESFA.DC.ILR.ReportService.Tests.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CodeAnalysisRuleSet>..\ESFA.DC.ILR.ReportService.Tests\ESFA.DC.ILR.ReportService.Tests.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <CodeAnalysisRuleSet>..\ESFA.DC.ILR.ReportService.Tests\ESFA.DC.ILR.ReportService.Tests.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Cells" Version="19.2.0" />
+    <PackageReference Include="ESFA.DC.Data.DAS.Model" Version="0.1.0" />
+    <PackageReference Include="ESFA.DC.Data.LARS.Model" Version="0.1.4-beta0001" />
+    <PackageReference Include="ESFA.DC.DateTimeProvider.Interface" Version="0.1.6-beta0001" />
+    <PackageReference Include="ESFA.DC.ILR.1819.Model" Version="0.1.4-beta0001" />
+    <PackageReference Include="ESFA.DC.ILR.FundingService.ALB.FundingOutput.Model" Version="0.1.320" />
+    <PackageReference Include="ESFA.DC.ILR.FundingService.FM25.FundingOutput.Model" Version="0.1.320" />
+    <PackageReference Include="ESFA.DC.ILR.FundingService.FM35.FundingOutput.Model" Version="0.1.320" />
+    <PackageReference Include="ESFA.DC.ILR.FundingService.FM36.FundingOutput.Model" Version="0.1.320" />
+    <PackageReference Include="ESFA.DC.ILR.FundingService.FM81.FundingOutput.Model" Version="0.1.320" />
+    <PackageReference Include="ESFA.DC.ILR.ValidationErrors.Interface" Version="0.1.6-beta0001" />
+    <PackageReference Include="ESFA.DC.Logging" Version="0.1.1-beta0001" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Context\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ESFA.DC.ILR.ReportService.Model\ESFA.DC.ILR.ReportService.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ESFA.DC.DateTimeProvider.Interface">
+      <HintPath>..\packages\ESFA.DC.DateTimeProvider.Interface.0.1.6-beta0001\lib\netstandard2.0\ESFA.DC.DateTimeProvider.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="ESFA.DC.EAS1819.EF">
+      <HintPath>..\packages\ESFA.DC.EAS1819.EF.0.1.0\lib\net461\ESFA.DC.EAS1819.EF.dll</HintPath>
+    </Reference>
+    <Reference Include="ESFA.DC.ILR1819.DataStore.EF">
+      <HintPath>..\packages\ESFA.DC.ILR1819.Database.EF.0.1.8-beta0001\lib\net46\ESFA.DC.ILR1819.DataStore.EF.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

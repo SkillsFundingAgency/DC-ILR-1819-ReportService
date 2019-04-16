@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E327D70-D514-40A0-AC07-35176660149C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ESFA.DC.ILR.ReportService.Service</RootNamespace>
+    <AssemblyName>ESFA.DC.ILR.ReportService.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\ESFA.DC.ILR.ReportService.Tests\ESFA.DC.ILR.ReportService.Tests.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\ESFA.DC.ILR.ReportService.Tests\ESFA.DC.ILR.ReportService.Tests.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\ESFA.DC.ILR.ReportService.Tests\ESFA.DC.ILR.ReportService.Tests.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\ESFA.DC.ILR.ReportService.Tests\ESFA.DC.ILR.ReportService.Tests.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builders\AdultFundingClaimBuilder.cs" />
+    <Compile Include="Builders\AllbBuilder.cs" />
+    <Compile Include="Builders\AppsIndicativeEarningsModelBuilder.cs" />
+    <Compile Include="Builders\DasCommitmentBuilder.cs" />
+    <Compile Include="Builders\EasBuilder.cs" />
+    <Compile Include="Builders\Fm25Builder.cs" />
+    <Compile Include="Builders\Fm36Builder.cs" />
+    <Compile Include="Builders\Fm81Builder.cs" />
+    <Compile Include="Builders\HNSReportModelBuilder.cs" />
+    <Compile Include="Builders\MainOccupancyReportModelBuilder.cs" />
+    <Compile Include="Builders\MathsAndEnglishModelBuilder.cs" />
+    <Compile Include="Builders\Fm35Builder.cs" />
+    <Compile Include="Builders\PeriodEnd\FundingSummaryPeriodEndModelBuilder.cs" />
+    <Compile Include="Builders\PeriodEnd\AppsDataMatchMonthEndModelBuilder.cs" />
+    <Compile Include="Builders\PeriodEnd\AppsMonthlyPaymentModelBuilder.cs" />
+    <Compile Include="Builders\PeriodEnd\AppsAdditionalPaymentsModelBuilder.cs" />
+    <Compile Include="Builders\PeriodEnd\AppsCoInvestmentContributionsModelBuilder.cs" />
+    <Compile Include="Builders\TotalBuilder.cs" />
+    <Compile Include="Builders\TrailblazerAppsOccupancyModelBuilder.cs" />
+    <Compile Include="Builders\TrailblazerEmployerIncentivesModelBuilder.cs" />
+    <Compile Include="BusinessRules\MathsAndEnglishFM25Rules.cs" />
+    <Compile Include="Commands\AppsIndicativeEarnings\AppsIndicativeAprilCommand.cs" />
+    <Compile Include="Commands\AppsIndicativeEarnings\AppsIndicativeJulyCommand.cs" />
+    <Compile Include="Commands\AppsIndicativeEarnings\AppsIndicativeJuneCommand.cs" />
+    <Compile Include="Commands\AppsIndicativeEarnings\AppsIndicativeMayCommand.cs" />
+    <Compile Include="Commands\AppsIndicativeEarnings\AppsIndicativeMarchCommand.cs" />
+    <Compile Include="Commands\AppsIndicativeEarnings\AppsIndicativeFebruaryCommand.cs" />
+    <Compile Include="Commands\AppsIndicativeEarnings\AppsIndicativeJanuaryCommand.cs" />
+    <Compile Include="Commands\AppsIndicativeEarnings\AppsIndicativeDecemberCommand.cs" />
+    <Compile Include="Commands\AppsIndicativeEarnings\AppsIndicativeNovemberCommand.cs" />
+    <Compile Include="Commands\AppsIndicativeEarnings\AppsIndicativeOctoberCommand.cs" />
+    <Compile Include="Commands\AppsIndicativeEarnings\AppsIndicativeSeptemberCommand.cs" />
+    <Compile Include="Comparer\AllbOccupancyModelComparer.cs" />
+    <Compile Include="Comparer\AppsIndicativeEarningsModelComparer.cs" />
+    <Compile Include="Comparer\DasCommitmentsComparer.cs" />
+    <Compile Include="Comparer\DataMatchModelComparer.cs" />
+    <Compile Include="Comparer\HNSModelComparer.cs" />
+    <Compile Include="Comparer\MainOccupancyModelComparer.cs" />
+    <Compile Include="Comparer\SummaryOfFm35FundingModelComparer.cs" />
+    <Compile Include="Comparer\MathsAndEnglishModelComparer.cs" />
+    <Compile Include="Comparer\SummaryOfFunding1619ModelComparer.cs" />
+    <Compile Include="Comparer\TrailblazerAppsOccupancyModelComparer.cs" />
+    <Compile Include="Comparer\TrailblazerEmployerIncentivesModelComparer.cs" />
+    <Compile Include="Comparer\ValidationErrorsModelComparer.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="EntryPoint.cs" />
+    <Compile Include="Extensions\AcademicPeriodYearExtensions.cs" />
+    <Compile Include="Extensions\DataMatch\EarningExtensions.cs" />
+    <Compile Include="Extensions\DataMatch\PriceEpisodeMatchExtensions.cs" />
+    <Compile Include="Extensions\DataMatch\PriceEpisodePeriodMatchExtensions.cs" />
+    <Compile Include="Extensions\DataMatch\ValidationErrorExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\Eas\EasPaymentTypesExtensions.cs" />
+    <Compile Include="Extensions\Eas\EasSubmissionValuesExtensions.cs" />
+    <Compile Include="Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Mapper\AllbOccupancyMapper.cs" />
+    <Compile Include="Mapper\PeriodEnd\FundingSummaryPeriodEndMapper.cs" />
+    <Compile Include="Mapper\PeriodEnd\AppsDataMatchMonthEndMapper.cs" />
+    <Compile Include="Mapper\PeriodEnd\AppsMonthlyPaymentMapper.cs" />
+    <Compile Include="Mapper\PeriodEnd\AppsAdditionalPaymentsMapper.cs" />
+    <Compile Include="Mapper\AppsIndicativeEarningsMapper.cs" />
+    <Compile Include="Mapper\DataMatchReportMapper.cs" />
+    <Compile Include="Mapper\FundingSummaryFooterMapper.cs" />
+    <Compile Include="Mapper\FundingSummaryHeaderMapper.cs" />
+    <Compile Include="Mapper\FundingSummaryMapper.cs" />
+    <Compile Include="Mapper\HNSMapper.cs" />
+    <Compile Include="Mapper\MainOccupancyMapper.cs" />
+    <Compile Include="Mapper\MathsAndEnglishMapper.cs" />
+    <Compile Include="Mapper\PeriodEnd\AppsCoInvestmentContributionsMapper.cs" />
+    <Compile Include="Mapper\SummaryOfFM35FundingMapper.cs" />
+    <Compile Include="Mapper\SummaryOfFunding1619Mapper.cs" />
+    <Compile Include="Mapper\TrailblazerAppsOccupancyMapper.cs" />
+    <Compile Include="Mapper\TrailblazerEmployerIncentiveMapper.cs" />
+    <Compile Include="Mapper\ValidationErrorMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenceData\DataLockValidationMessage.cs" />
+    <Compile Include="ReferenceData\DataLockValidationMessages.cs" />
+    <Compile Include="Reports\Abstract\AbstractReport.cs" />
+    <Compile Include="Reports\PeriodEnd\FundingSummaryPeriodEndReport.cs" />
+    <Compile Include="Reports\PeriodEnd\AppsDataMatchMonthEndReport.cs" />
+    <Compile Include="Reports\PeriodEnd\AppsMonthlyPaymentReport.cs" />
+    <Compile Include="Reports\PeriodEnd\AppsAdditionalPaymentsReport.cs" />
+    <Compile Include="Reports\AppsIndicativeEarningsReport.cs" />
+    <Compile Include="Reports\DataMatchReport.cs" />
+    <Compile Include="Reports\AdultFundingClaimReport.cs" />
+    <Compile Include="Reports\FundingClaim1619Report.cs" />
+    <Compile Include="Reports\HNSDetailReport.cs" />
+    <Compile Include="Reports\MathsAndEnglishReport.cs" />
+    <Compile Include="Reports\PeriodEnd\AppsCoInvestmentContributionsReport.cs" />
+    <Compile Include="Reports\SummaryOfFM35FundingReport.cs" />
+    <Compile Include="Reports\SummaryOfFunding1619Report.cs" />
+    <Compile Include="Reports\AllbOccupancyReport.cs" />
+    <Compile Include="Reports\FundingSummaryReport.cs" />
+    <Compile Include="Reports\MainOccupancyReport.cs" />
+    <Compile Include="Reports\TrailblazerAppsOccupancyReport.cs" />
+    <Compile Include="Reports\TrailblazerEmployerIncentivesReport.cs" />
+    <Compile Include="Reports\ValidationErrorsReport.cs" />
+    <Compile Include="Service\AllbProviderService.cs" />
+    <Compile Include="Service\BaseLearnersService.cs" />
+    <Compile Include="Service\CacheProviderService.cs" />
+    <Compile Include="Service\DASPaymentsProviderService.cs" />
+    <Compile Include="Service\DataMatch\DasCommitmentsService.cs" />
+    <Compile Include="Service\DataMatch\DatalockValidationResultBuilder.cs" />
+    <Compile Include="Service\EasProviderService.cs" />
+    <Compile Include="Service\ExcelStyleProvider.cs" />
+    <Compile Include="Service\FM25ProviderService.cs" />
+    <Compile Include="Service\FM35ProviderService.cs" />
+    <Compile Include="Service\FM36ProviderService.cs" />
+    <Compile Include="Service\FM81TrailBlazerProviderService.cs" />
+    <Compile Include="Service\IlrProviderService.cs" />
+    <Compile Include="Service\IntUtilitiesService.cs" />
+    <Compile Include="Service\InvalidLearnersService.cs" />
+    <Compile Include="Service\LargeEmployerProviderService.cs" />
+    <Compile Include="Service\PostcodeProviderService.cs" />
+    <Compile Include="Service\LarsProviderService.cs" />
+    <Compile Include="Service\OrgProviderService.cs" />
+    <Compile Include="Service\PeriodProviderService.cs" />
+    <Compile Include="Service\StringUtilitiesService.cs" />
+    <Compile Include="Service\ValidationErrorsService.cs" />
+    <Compile Include="Service\ValidationStageOutputCache.cs" />
+    <Compile Include="Service\ValidLearnersService.cs" />
+    <Compile Include="Commands\AppsIndicativeEarnings\AppsIndicativeAugustCommand.cs" />
+    <Compile Include="Service\ValueProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.config">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Templates\AdultFundingClaimReportTemplate.xlsx" />
+    <None Include="ESFA.DC.ILR.ReportService.Service.ruleset">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Reports\Templates\1619FundingClaimReportTemplate.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ESFA.DC.ILR.ReportService.Interface\ESFA.DC.ILR.ReportService.Interface.csproj">
+      <Project>{4D408F22-661B-44B3-B6CA-3C6CEE60AC87}</Project>
+      <Name>ESFA.DC.ILR.ReportService.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ESFA.DC.ILR.ReportService.Model\ESFA.DC.ILR.ReportService.Model.csproj">
+      <Project>{39DB428D-1380-40F2-9361-18ED31CF95FC}</Project>
+      <Name>ESFA.DC.ILR.ReportService.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EuFlag.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspose.Cells">
+      <Version>19.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Autofac">
+      <Version>4.8.1</Version>
+    </PackageReference>
+    <PackageReference Include="CsvHelper">
+      <Version>7.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.DASPayments.EF">
+      <Version>0.1.67</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.Data.DAS.Model">
+      <Version>0.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.Data.ILR.1819.ValidationErrors.Model">
+      <Version>0.1.2-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.Data.LargeEmployer.Model">
+      <Version>0.1.2-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.Data.LARS.Model">
+      <Version>0.1.4-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.Data.Organisations.Model">
+      <Version>0.1.8-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.Data.Postcodes.Model">
+      <Version>0.1.3-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.DateTimeProvider.Interface">
+      <Version>0.1.6-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.EAS1819.EF">
+      <Version>0.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.1819.Model">
+      <Version>0.1.4-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.1819.Model.Interface">
+      <Version>0.1.4-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.FundingService.ALB.FundingOutput.Model">
+      <Version>0.1.320</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.FundingService.FM25.FundingOutput.Model">
+      <Version>0.1.320</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.FundingService.FM35.FundingOutput.Model">
+      <Version>0.1.320</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.FundingService.FM36.FundingOutput.Model">
+      <Version>0.1.320</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.FundingService.FM81.FundingOutput.Model">
+      <Version>0.1.320</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR.ValidationErrors.Interface">
+      <Version>0.1.6-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.ILR1819.Database.EF">
+      <Version>0.1.373</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.IO.AzureStorage">
+      <Version>0.1.14-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.IO.Interfaces">
+      <Version>0.1.12-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.JobContextManager">
+      <Version>0.2.4-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.Jobs.Model">
+      <Version>0.1.27-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.Serialization.Json">
+      <Version>0.1.5-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="ESFA.DC.Serialization.Xml">
+      <Version>0.1.5-beta0001</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers">
+      <Version>2.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <Version>2.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer">
+      <Version>2.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="StyleCop.Analyzers">
+      <Version>1.0.2</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.DiagnosticSource">
+      <Version>4.5.1</Version>
+    </PackageReference>
+    <PackageReference Include="WindowsAzure.Storage">
+      <Version>9.3.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
